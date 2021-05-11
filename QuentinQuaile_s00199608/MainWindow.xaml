@@ -1,0 +1,26 @@
+﻿<Window x:Class="QuentinQuaile_s00199608.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:QuentinQuaile_s00199608"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Window.Resources>
+        <DataTemplate x:Key="GameBoxTemp">
+            <StackPanel Orientation="Horizontal">
+                <Image Source="{Binding GameImage}" Width="75" Height="75"/>
+
+                <StackPanel>
+                    <TextBlock Text="{Binding Name}" Margin="5" FontSize="12"/>
+                </StackPanel>
+            </StackPanel>
+        </DataTemplate>
+    </Window.Resources>
+    <Grid>
+        <ListBox x:Name="GameBox" HorizontalAlignment="Left" Height="328" Margin="40,49,0,0" VerticalAlignment="Top" Width="261" ItemTemplate="{StaticResource GameBoxTemp}"/>
+        <TextBlock x:Name="DescriptionBlock" HorizontalAlignment="Left" Margin="485,49,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="127" Width="200"/>
+        <Image x:Name="GamerImage" HorizontalAlignment="Left" Height="201" Margin="485,176,0,0" VerticalAlignment="Top" Width="200"/>
+
+    </Grid>
+</Window>
