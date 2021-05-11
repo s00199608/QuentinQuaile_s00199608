@@ -18,9 +18,13 @@
         </DataTemplate>
     </Window.Resources>
     <Grid>
-        <ListBox x:Name="GameBox" HorizontalAlignment="Left" Height="328" Margin="40,49,0,0" VerticalAlignment="Top" Width="261" ItemTemplate="{StaticResource GameBoxTemp}"/>
-        <TextBlock x:Name="DescriptionBlock" HorizontalAlignment="Left" Margin="485,49,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="127" Width="200"/>
-        <Image x:Name="GamerImage" HorizontalAlignment="Left" Height="201" Margin="485,176,0,0" VerticalAlignment="Top" Width="200"/>
+        <ListBox x:Name="GameBox" HorizontalAlignment="Left" Height="328" Margin="40,49,0,0" VerticalAlignment="Top" Width="261" ItemTemplate="{StaticResource GameBoxTemp}" SelectionChanged="GameBox_SelectionChanged"/>
+        <TextBlock x:Name="DescriptionBlock" HorizontalAlignment="Left" Margin="346,49,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="137" Width="339"/>
+        <Image x:Name="GamerImage" HorizontalAlignment="Left" Height="153" Margin="511,224,0,0" VerticalAlignment="Top" Width="174"/>
+        <RadioButton x:Name="radioButton" Content="All" HorizontalAlignment="Left" Margin="40,29,0,0" VerticalAlignment="Top" Checked="radioButton_Checked"/>
+        <RadioButton x:Name="radioButton_Copy" Content="Xbox" HorizontalAlignment="Left" Margin="94,29,0,0" VerticalAlignment="Top" Checked="radioButton_Copy_Checked"/>
+        <RadioButton x:Name="radioButton_Copy1" Content="PS" HorizontalAlignment="Left" Margin="163,29,0,0" VerticalAlignment="Top" Checked="radioButton_Copy1_Checked"/>
+        <RadioButton x:Name="radioButton_Copy2" Content="Switch" HorizontalAlignment="Left" Margin="234,29,0,0" VerticalAlignment="Top" Checked="radioButton_Copy2_Checked"/>
 
     </Grid>
 </Window>
